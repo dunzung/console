@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'UNICOM-CONSOLE',
+  title: 'CONSOLE',
 
   /**
    * 是否系统布局配置

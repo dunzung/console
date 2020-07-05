@@ -31,6 +31,16 @@ const permission = {
         },
         children: [
           {
+            name: "UserManager",
+            path: "userIndex",
+            hidden: false,
+            component: "system/user/index",
+            meta: {
+              title: "用户管理",
+              icon: "user"
+            }
+          },
+          {
             name: "SwitchCache",
             path: "cache/switch",
             hidden: false,
@@ -49,8 +59,7 @@ const permission = {
               title: "岗位缓存",
               icon: "user"
             }
-          }
-        ]
+          }]
       }
     ]
   },

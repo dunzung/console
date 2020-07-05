@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      title: 'UNICOM-CONSOLE',
+      title: 'CONSOLE',
       logo: logoImg
     }
   }

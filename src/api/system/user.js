@@ -2,9 +2,9 @@ import request from '@/utils/request'
 import { praseStrEmpty } from "@/utils/ruoyi";
 
 // 查询用户列表
-export function listUser(query) {
+export function getUserPage(query) {
   return request({
-    url: '/system/user/list',
+    url: '/user/list',
     method: 'get',
     params: query
   })

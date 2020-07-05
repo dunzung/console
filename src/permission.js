@@ -12,18 +12,15 @@ let flag = false;
 router.beforeEach((to, from, next) => {
 
   if (!flag){
-    console.log("ssssssssssss::" + flag) 
     flag = true
     store.dispatch('GetInfo').then(res => {
       // 拉取user_info
-    
       const roles = res.roles
-      console.log("res.roles::" + res.roles)
       store.dispatch('GenerateRoutes', { roles }).then(accessRoutes => {
       // 测试 默认静态页面
       // store.dispatch('permission/generateRoutes', { roles }).then(accessRoutes => {
         // 根据roles权限生成可访问的路由表
-        console.log("accessRoutes::" + accessRoutes)
+       // console.log("accessRoutes::" + accessRoutes)
         router.addRoutes(accessRoutes) // 动态添加可访问路由表
         next({ ...to, replace: true }) // hack方法 确保addRoutes已完成
       })
@@ -35,7 +32,6 @@ router.beforeEach((to, from, next) => {
         })
       })
   } else{
-      console.log("ssssssssssss::" + flag) 
     next()
   }
 })
